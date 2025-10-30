@@ -48,35 +48,31 @@ Product Owners should have the ultimate decision in this. That way the core deve
 ### 6. Issues will have to be categorized by setting a type
 Everything that isn’t a minor change should have a connected issue. 
 
+In case it's a minor chage we set this label on the PR: `Minor Change`. The definition of something being a minor change is that there’s no need for preparing the change by reviewing the desing or the modification of OTP functionality. Documentation is often a minor change.
+
 All issues describing modifications to OTP need to be one of these types:
- - `Minor Change`
  - `Bug`
- - `Refactoring`
- - `Optimization`
- - `New Functionality`
+ - `Feature`
+ - `Technical Improvement`
 
 
-**Minor Change:** The definition of something being a minor change is that there’s no need for preparing the change by reviewing the architecture or the modification of OTP functionality. Minor changes don't need to have a connected issue, and in those cases we set this label on the PR: `Minor Change`.
+**Bug:** Un unexpected problem or behaviour.
+**Feature:** A request, idea, or new functionality.
+**Technical Improvement:** None functional improvements like refactoring, optimizations, cleanup and CI/CD.
 
-**Bug:** The definition of a bug is a change made to correct an error or flaw in the code that causes the program to behave in an unintended or incorrect way.
 
-**Refactoring:** The definition of refactoring is improving the internal structure of existing code without changing its external behavior.
-
-**Optimization:** The definition of optimization is the process of improving how well software performs by making it faster, lighter, or more efficient, without changing what it does.
-
-**New Functionality:** New functionality is defined as any non-trivial change to OTP’s behavior.
 
 
 
 
 ### 7. Acceptance criteria for the different types of OTP modifications
-Modifications that are minor changes can be accepted without preparation, and will be added to OTP according to the rules for reviewing.
+Modifications that are minor changes can be accepted without preparation, and will be added to OTP according to the rules for reviewing PRs.
 
-For changes classified as refactoring, optimizations or bugs, approval of the architectural design is considered sufficient.
+For changes classified as `Bug` or `Technical Improvement`, approval of the architectural design is considered sufficient.
 
-For new functionality, both the approval that it is desired in OTP and approval of the architectural design are required.
+For changes classified as `Feature`, both the approval that it is desired in OTP and approval of the architectural design are required.
 
-Acceptance of the architectual design is documented by giving the issue the tag: `Architecture Accepted`
+Acceptance of the architectual design is documented by giving the issue the tag: `Design approved`
 
-Acceptance of new functionality is documented by giving it the tag `Functionality Accepted`, or if it is rejected `Functionality Rejected`.
+Acceptance of new functionality is documented by giving it the tag `Feature approved`, or if it is rejected `Feature rejected`.
 
